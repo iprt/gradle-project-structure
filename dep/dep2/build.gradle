@@ -1,0 +1,5 @@
+dependencies {
+    implementation(project(":dep:dep1")){
+        transitive(true)
+    }
+}

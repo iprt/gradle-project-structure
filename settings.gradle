@@ -1,0 +1,6 @@
+rootProject.name = 'gradle-multi-project'
+
+include("springboot")
+include("dep:dep1")
+include("dep:dep2")
+include("dep:dep3")
