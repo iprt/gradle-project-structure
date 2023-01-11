@@ -1,0 +1,22 @@
+// == Define locations for build logic ==
+pluginManagement {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        gradlePluginPortal()
+    }
+    includeBuild('../build-logic')
+}
+
+// == Define locations for components ==
+dependencyResolutionManagement {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        mavenCentral()
+    }
+}
+includeBuild('../platforms')
+
+// == Define the inner structure of this component ==
+rootProject.name = 'application' // the component name
+include('boot')
+include('cloud')

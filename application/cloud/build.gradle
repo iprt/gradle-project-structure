@@ -1,0 +1,11 @@
+plugins {
+    // from build-logic spring-cloud-application
+    id('org.iproute.spring-cloud-application')
+}
+
+group = "${group}.server-application"
+version = "1.0-SNAPSHOT"
+
+dependencies {
+    implementation('org.apache.juneau:juneau-marshall')
+}

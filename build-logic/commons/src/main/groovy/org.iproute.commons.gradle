@@ -1,0 +1,26 @@
+plugins {
+    id('java')
+}
+
+group = 'org.iproute.product'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+
+dependencies {
+    implementation(platform('org.iproute.platform:product-platform'))
+
+    // 来自 implementation(platform('org.iproute.platform:product-platform')) 中的 api
+    implementation("com.google.guava:guava")
+    implementation("org.apache.commons:commons-lang3")
+
+    testImplementation(platform('org.iproute.platform:test-platform'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+}
+
+tasks.named("test") {
+    useJUnitPlatform()
+}

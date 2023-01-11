@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: cloud
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos_discovery_addr:172.100.1.100:8848}
+        username: ${nacos_discovery_username:nacos}
+        password: ${nacos_discovery_password:nacos}
+        namespace: ${nacos_discovery_namespace:cloud}
+        group: ${nacos_discovery_group:DEFAULT_GROUP}
+      config:
+        server-addr: ${nacos_config_addr:172.100.1.100:8848}
+        username: ${nacos_config_username:nacos}
+        password: ${nacos_config_password:nacos}
+        namespace: ${nacos_config_namespace:cloud}
+        group: ${nacos_config_group:DEFAULT_GROUP}
+        file-extension: yaml
+        extension-configs:
+          - group: ${nacos_extension_config_group:DEFAULT_GROUP}
+            data-id: extension.yaml
+            refresh: false
