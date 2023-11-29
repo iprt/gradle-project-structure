@@ -27,8 +27,8 @@ public class BootApplication {
         SpringApplication.run(BootApplication.class, args);
     }
 
-    @GetMapping("/list")
-    public List<String> list() {
+    @GetMapping("/")
+    public List<String> root() {
         return Lists.newArrayList("hello", "world");
     }
 
