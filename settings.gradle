@@ -1,4 +1,4 @@
-rootProject.name = 'gradle-multi-project'
+rootProject.name = 'gradle-project-structure'
 
 includeBuild('platforms')
 includeBuild('build-logic')
