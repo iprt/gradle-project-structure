@@ -17,6 +17,6 @@ spring:
         group: ${NACOS_CONFIG_GROUP:DEFAULT_GROUP}
         file-extension: yaml
         extension-configs:
-          - group: ${NACOS_EXTENSION_CONFIG_GROUP:DEFAULT_GROUP}
+          - group: ${NACOS_CONFIG_GROUP:DEFAULT_GROUP}
             data-id: extension.yaml
             refresh: false
